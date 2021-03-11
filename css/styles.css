@@ -28,10 +28,17 @@ body{
   background-position: top, bottom;
 }
 
-@media screen and (min-width: 768px){
+@media (min-width: 768px){
   body{
+    max-width: 1440px;
+    /* margin-left: auto;
+    margin-left: auto; */
     background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
     background-position: top left, bottom right;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2, 800px;
+    align-content: center;
   }
 }
 
@@ -39,6 +46,13 @@ body{
 .header{
   text-align: center;
   padding-top: 52px;
+}
+
+@media (min-width: 768px){
+  .header{
+  text-align: left;
+  margin-left: 100px;
+  }
 }
 
 .header__title{
@@ -86,6 +100,16 @@ body{
 
 .testimonials{
   margin: 48px 15px;
+}
+
+@media (min-width: 768px){
+  .testimonials{
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 1 / 4;
+    grid-row: 2;
+
+  }
 }
 
 .testimonial{
